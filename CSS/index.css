@@ -1,0 +1,333 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    max-height: 20vw;
+    font-size: 2vmin;
+    font-family: 'Fira Mono', monospace;
+}
+
+body{
+    background-color: hsl(215, 59%, 4%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    overflow-x: hidden;
+
+}
+
+#elijah_standing{
+    background-image: linear-gradient(hsl(215, 59%, 50%), hsl(215, 59%, 35%));
+    width: 50%;
+    height: 90vminw;
+    top: 0vmin;
+    transition: all 1s ease-out;
+}
+
+#me_image{
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    right: 10%;
+    border-radius: 30px 60px;
+    top: 10%;
+    background-image: url("../images/elijah_standing.png");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    box-shadow: 0.4em 0.4em 0.2em #000;
+}
+
+#me_info{
+    display: flex;
+    padding: 6%;
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    right: 10%;
+    border-radius: 30px 60px;
+    top: 10%;
+    background-color: hsl(215, 70%, 45%);
+    background-size:cover ;
+    background-repeat: no-repeat;
+    box-shadow: 0.4em 0.4em 0.2em #000;
+    font-size: 3vmin;
+    line-height: 1.4;
+    box-sizing: border-box;
+    color: hsl(13, 30%, 90%);
+    text-shadow: 0.05em 0.05em #000;
+    overflow-y: auto;
+}
+
+#nav_bar{
+    position: sticky;
+    width: 100%;
+    height: 10vmin;
+    background-color: hsl(215, 59%, 50%);
+    top: 0px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 1s ease-in-out;
+}
+
+#nav_bar.bubble{
+    width: 40%;
+    border-radius: 0 0 50px 0;
+}
+
+.nav_button{
+    padding: 1em;
+    background-color: hsl(13, 79%, 58%);
+    border-radius: 10em;
+    border: none;
+    transition: width 1s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Fira Mono', monospace;
+    font-size: 1em;
+    color: hsl(13, 30%, 90%);
+    white-space: nowrap;
+    box-shadow: 0.2em 0.2em 0.2em #000;
+}
+
+.nav_button.bubble{
+    padding: 0.5em;
+    font-size: 1.5em;
+    margin: 0.2em;
+}
+
+.nav_button:hover{
+    background-color: darkgray;
+}
+
+#hello_world{
+    transform-style: preserve-3d;
+    perspective: 10em;
+    overflow: hidden;
+    perspective-origin: 50% calc(50% - 2em);
+    position: sticky;
+    display: flex;
+    width: 100%;
+    top: 10vmin;
+    height: 90vmin;
+    font-size: 7em;
+    align-items: center;
+    justify-content: center;
+    color: #e9643f;
+    text-shadow:
+    0 0 7px #e9957e,
+    0 0 10px #e9957e,
+    0 0 21px #e9957e,
+    0 0 42px #e9643f,
+    0 0 82px #e9643f,
+    0 0 92px #e9643f,
+    0 0 102px #e9643f,
+    0 0 151px #e9643f;
+}
+
+.floor{
+    position: absolute;
+    top: -5em;
+    transform: 
+        translate(0, 0)
+        rotateX(90deg);
+
+    width: 200%;
+    height: 300%;
+    background-image: 
+        radial-gradient(#0000, #000 75%),
+        repeating-conic-gradient(
+        from 45deg,
+        #111 0deg 90deg,
+        #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+    z-index: -2;
+}
+
+#about_me{
+    width: 50%;
+    height: 90vmin;
+    background-image: linear-gradient(hsl(215, 59%, 50%), hsl(215, 59%, 35%));
+    transition: all 1s ease-out;
+}
+
+#past_projects{
+    width: 100%;
+    height: 90vmin;
+    background-image: linear-gradient(hsl(215, 59%, 35%), hsl(215, 59%, 20%));
+    position: relative;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact{
+    width: 100vw;
+    height: 90vmin;
+    background-image: linear-gradient(hsl(215, 59%, 20%), hsl(215, 59%, 5%));
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2em;
+    color:hsl(13, 30%, 90%);
+    order: 3;
+}
+
+a:link, a:visited {
+    color: hsl(13, 79%, 58%);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: hsl(13, 79%, 58%) wavy underline;
+}
+  
+  a:link:active, a:visited:active {
+    color: hsl(13, 79%, 58%);
+}
+
+.content-div{
+    transition: all 1s ease-out ;
+}
+
+.left.move{
+    transform: translateX(0%);
+}
+
+.left{
+    transform: translateX(-100%);
+}
+
+.right.move{
+    transform: translateX(0%);
+}
+
+.right{
+    transform: translateX(100%);
+}
+
+
+.slide-div{
+    width: 100%;
+    height: 90vmin;
+    position: relative;
+    display: flex;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b3b3b3;
+    border-radius: 100px;
+}
+
+#carousel{
+    background-color: hsl(215, 59%, 4%);
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 95%;
+    height: 80%;
+}
+
+#column1{
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#column2{
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#column3{
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel_content{
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1em;
+    align-items: center;
+    width: 96%;
+    height: 80%;
+    scroll-padding-top: 2em;
+    background-color: hsl(215, 70%, 45%);
+    border-radius: 1em;
+    transition: transform  0.5s ease-in-out;
+    box-shadow: 0.3em 0.3em 0.3em hsl(215, 39%, 39%);
+    color: hsl(13, 30%, 90%);
+}
+
+.carousel_image{
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0.3em 0.3em 0.3em hsl(215, 59%, 30%);
+    max-height: 45%;
+    /* aspect-ratio: 1 / 1; */
+}
+
+.ghost{
+    height: 10%;
+}
+
+#column2 .carousel_content{
+    transition-delay: 0.15s;
+}
+
+#column3 .carousel_content{
+    transition-delay: 0.25s;
+}
+
+.arrow{
+    border: solid rgb(166, 165, 165);
+    background-color: transparent;
+    border-width: 0 1em 1em 0;
+    border-radius: 1em;
+    display: inline-block;
+    padding: 0.5em;
+    width: 1em;
+    height: 1em;
+}
+
+.arrow:hover{
+    border-color: black;
+}
+
+.down{
+    transform: rotate(45deg);
+}
+
+  
+.up{
+    transform: rotate(-135deg);
+}

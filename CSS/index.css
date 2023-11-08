@@ -54,7 +54,7 @@ body{
     background-size:cover ;
     background-repeat: no-repeat;
     box-shadow: 0.4em 0.4em 0.2em #000;
-    font-size: 3vmin;
+    font-size: 2.9vmin;
     line-height: 1.4;
     box-sizing: border-box;
     color: hsl(13, 30%, 90%);
@@ -293,7 +293,10 @@ a:hover{
     border-radius: 20px;
     box-shadow: 0.3em 0.3em 0.3em hsl(215, 59%, 30%);
     max-height: 45%;
-    /* aspect-ratio: 1 / 1; */
+}
+
+.carousel_text {
+    overflow: auto;
 }
 
 .ghost{
